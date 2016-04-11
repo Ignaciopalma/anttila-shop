@@ -8,6 +8,8 @@ default: &default
   adapter: sqlite3
   pool: 5
   timeout: 5000
+  username: admin@example.com
+  password: test123
 
 development:
   <<: *default
@@ -23,4 +25,4 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite
+  database: db/production.postgresql
